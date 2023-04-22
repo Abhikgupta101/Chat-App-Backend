@@ -11,7 +11,7 @@ const cors = require("cors");
 const app = express()
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://social-media-chat-app.netlify.app',
     credentials: true,
 }));
 app.use(express.json())
@@ -39,7 +39,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://social-media-chat-app.netlify.app",
         methods: ["GET", "POST"],
     },
 })

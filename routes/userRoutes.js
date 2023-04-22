@@ -20,7 +20,7 @@ router.use(requireAuth)
 
 router.get('/info/:id', getUser)
 router.get('/', getUsers)
-router.get('/logout', logout)
+router.get('/', logout)
 
 
 
