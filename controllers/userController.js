@@ -136,7 +136,7 @@ const sendEmail = async (req, res) => {
                 from: process.env.EMAIL,
                 to: email,
                 subject: "Sending Email For password Reset",
-                text: `http://localhost:3000/password/reset/${user._id}/${token}`
+                text: `https://social-media-chat-app.netlify.app/password/reset/${user._id}/${token}`
             }
 
             transporter.sendMail(mailOptions, (error, info) => {
